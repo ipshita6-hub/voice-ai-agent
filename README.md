@@ -35,41 +35,40 @@ pip install -r requirements_simple.txt
 
 ### 4. Run the Agent
 ```bash
-python quick_start.py
+python quick_start_simple.py
 ```
 
 ## Usage Examples
 
-Try these commands:
-- "Add a task to buy groceries tomorrow"
-- "What's on my to-do list?"
-- "Mark task 1 as completed"
-- "Delete task 2"
-- "My favorite color is blue"
-- "What do you remember about me?"
+Simple command format:
+```
+add: Buy groceries tomorrow
+list
+done: 1
+remember: My favorite color is blue
+recall
+quit
+```
+
+See `DEMO_EXAMPLES.md` for complete demo scripts!
 
 ## Project Structure
 
 ```
 voice-ai-agent/
-├── quick_start.py          # Simple entry point (START HERE!)
-├── main_local.py           # Full application with menu
-├── test_agent_local.py     # Automated test script
+├── quick_start_simple.py   # Main application (START HERE!)
 ├── agent/
 │   ├── core_local.py      # Agent logic with Ollama
 │   ├── prompt.py          # System prompt definition
 │   └── tools.py           # Tool implementations (CRUD + Memory)
-├── voice/
-│   ├── speech_to_text_local.py  # Local voice input (optional)
-│   └── text_to_speech_local.py  # Local voice output (optional)
 ├── memory/
 │   └── store.py           # Memory utilities
 ├── data/
 │   ├── todos.json         # To-Do list storage (auto-created)
 │   └── memory.json        # Memory storage (auto-created)
-├── requirements_simple.txt
-├── QUICK_START_GUIDE.md   # Detailed setup guide
-└── README.md
+├── requirements_simple.txt # Dependencies
+├── DEMO_EXAMPLES.md       # Complete demo scripts
+└── README.md              # This file
 ```
 
 ## How It Works
